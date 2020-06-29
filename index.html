@@ -39,99 +39,115 @@
       </nav>
     <br>
     <div class='container'>
-    <div class="row">
-      <div class="col-md-8">
-        <header>
-            <h1>Latitude vs. X</h1>
-        </header>
-        <div class="row row-grid">
-          <div class="col-md-8">
-              <div class="box box-left">
-                  <section id="intro">
-                      <h1>Summary</h1>
-                      <hr>
-                      <figure>
-                          <a target="_blank" href="Ploting_graph_of_Cities.png">
-                              <img id="viz-main" src="Ploting_graph_of_Cities.png" alt="Latitude of cities">
-                          </a>
-                      </figure>
+        <div class="row">
+            <div class="col-md-12">
+                <header>
+                    <h1>Latitude vs. X</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-left">
+                        <section id="intro">
+                            <h2>Summary</h2>
+                            <hr>
+                            <figure>
+                                <a target="_blank" href="Ploting_graph_of_Cities.png">
+                                    <img id="viz-main" src="Ploting_graph_of_Cities.png" alt="Latitude of cities">
+                                </a>
+                            </figure>
 
-                      <section id="summary">
-                          <p>This project utilizes Python, API’s, and JSON traversals to try and answer a fundamental question:
-                              “What’s the weather like as we get closer to the equator?”
-                          </p>
+                            <section id="summary">
+                                <p>This project utilizes Python, API’s, and JSON traversals to try and answer a fundamental question:
+                                    “What’s the weather like as we get closer to the equator?”
+                                </p>
 
-                          <p> Assigning 1,500 random Latitude and Longitudes, I utilized the Python CitiPy library to find
-                              the city closest to the Lat/Lon (dropping all duplicates) to get a listing of over 600 cities.
-                              I utilized OpenWeatherMapAPI to get the weather for the cities (dropping cities with no data)
-                              to create a dataframe of weather information for over 500 cities.
-                          </p>
+                                <p> Assigning 1,500 random Latitude and Longitudes, I utilized the Python CitiPy library to find
+                                    the city closest to the Lat/Lon (dropping all duplicates) to get a listing of over 600 cities.
+                                    I utilized OpenWeatherMapAPI to get the weather for the cities (dropping cities with no data)
+                                    to create a dataframe of weather information for over 500 cities.
+                                </p>
 
-                          <p>
-                              The dataframe is saved to CSV and the data is analyzed across the three climate zones (Tropical Zone, Temperate Zone, and
-                              Polar Zone). To showcase the relationship between latitude and temperature/humidity/cloudiness/wind
-                              speed I utilize MatplotLib scatter plots to view:
-                          </p>
+                                <p>
+                                    The dataframe is saved to CSV and the data is analyzed across the three climate zones (Tropical Zone, Temperate Zone, and
+                                    Polar Zone). To showcase the relationship between latitude and temperature/humidity/cloudiness/wind
+                                    speed I utilize MatplotLib scatter plots to view:
+                                </p>
 
-                          <ul>
-                              <li>Temperature (F) vs. Latitude</li>
-                              <li>Humidity (%) vs. Latitude</li>
-                              <li>Cloudiness (%) vs. Latitude</li>
-                              <li>Wind Speed (mph) vs. Latitude</li>
+                                <ul>
+                                    <li>Temperature (F) vs. Latitude</li>
+                                    <li>Humidity (%) vs. Latitude</li>
+                                    <li>Cloudiness (%) vs. Latitude</li>
+                                    <li>Wind Speed (mph) vs. Latitude</li>
 
-                          </ul>
+                                </ul>
 
-                      </section>
+                            </section>
 
-                  </section>
-              </div>
-          </div>
-
-
-          <div class="col-md-4">
-              <div class="box box-right">
-                  <h2>Visualizations</h2>
-                  <hr>
+                        </section>
+                    </div>
+                </div>
 
 
-                  <div class="row">
-                      <div class="col-xs-6 col-sm-3 col-md-6">
-                          <figure>
-                              <a href="temp.html">
-                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsTemperature.png" alt="L vs. Temperature">
-                              </a>
-                          </figure>
-                      </div>
+                
 
-                      <div class="col-xs-6 col-sm-3 col-md-6">
-                          <figure>
-                              <a href="humid.html">
-                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsHumidity.png" alt="L vs. Humidity">
-                              </a>
-                          </figure>
-                      </div>
-
-                      <div class="col-xs-6 col-sm-3 col-md-6">
-                          <figure>
-                              <a href="cloud.html">
-                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsCloudiness.png" alt="L vs. Cloudiness">
-                              </a>
-                          </figure>
-                      </div>
-
-                      <div class="col-xs-6 col-sm-3 col-md-6">
-                          <figure>
-                              <a href="wind.html">
-                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsWindspeed.png" alt="L vs. Wind Speed">
-                              </a>
-                          </figure>
-                      </div>
-
-                  </div>
-              </div>
-          </div>
-
-      </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-right">
+                            <h2>Visualizations</h2>
+                            <hr>
+        
+        
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-3 col-md-6">
+                                        <figure>
+                                            <a href="temp.html">
+                                                <img id="landing-viz" class="img-fluid" src="./WebVisualization/Assets:Images/LatitudevsTemperature.png" alt="L vs. Temperature">
+                                            </a>
+                                        </figure>
+                                    </div>
+            
+                                    <div class="col-xs-6 col-sm-3 col-md-6">
+                                        <figure>
+                                            <a href="humid.html">
+                                                <img id="landing-viz" class="img-fluid" src="./WebVisualization/Assets:Images/LatitudevsHumidity.png" alt="L vs. Humidity">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-3 col-md-6">
+                                        <figure>
+                                            <a href="cloud.html">
+                                                <img id="landing-viz" class="img-fluid" src="./WebVisualization/Assets:Images/LatitudevsCloudiness.png" alt="L vs. Cloudiness">
+                                            </a>
+                                        </figure>
+                                    </div>
+            
+                                    <div class="col-xs-6 col-sm-3 col-md-6">
+                                        <figure>
+                                            <a href="wind.html">
+                                                <img id="landing-viz" class="img-fluid" src="./WebVisualization/Assets:Images/LatitudevsWindspeed.png" alt="L vs. Wind Speed">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
       
       
    
