@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="UTF-8">
+    <title>Bootstrap Visualization Dashboard</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="WebVisualizations/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="index.html"><strong>Latitude</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="WebVisualizations/temp.html">Max Temperature</a>
+                <a class="dropdown-item" href="WebVisualizations/humidity.html">Humidity</a>
+                <a class="dropdown-item" href="WebVisualizations/clouds.html">Cloudiness</a>
+                <a class="dropdown-item" href="WebVisualizations/wind.html">Wind Speed</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link btn-info" href="WebVisualizations/Comparisons.html">Comparisons<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-info" href="WebVisualizations/data.html">Data</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <br>
+    <div class='container'>
+    <div class="row">
+      <div class="col-md-8">
+        <header>
+            <h1>Latitude vs. X</h1>
+        </header>
+        <div class="row row-grid">
+          <div class="col-md-8">
+              <div class="box box-left">
+                  <section id="intro">
+                      <h1>Summary</h1>
+                      <hr>
+                      <figure>
+                          <a target="_blank" href="Ploting_graph_of_Cities.png">
+                              <img id="viz-main" src="Ploting_graph_of_Cities.png" alt="Latitude of cities">
+                          </a>
+                      </figure>
+
+                      <section id="summary">
+                          <p>This project utilizes Python, API’s, and JSON traversals to try and answer a fundamental question:
+                              “What’s the weather like as we get closer to the equator?”
+                          </p>
+
+                          <p> Assigning 1,500 random Latitude and Longitudes, I utilized the Python CitiPy library to find
+                              the city closest to the Lat/Lon (dropping all duplicates) to get a listing of over 600 cities.
+                              I utilized OpenWeatherMapAPI to get the weather for the cities (dropping cities with no data)
+                              to create a dataframe of weather information for over 500 cities.
+                          </p>
+
+                          <p>
+                              The dataframe is saved to CSV and the data is analyzed across the three climate zones (Tropical Zone, Temperate Zone, and
+                              Polar Zone). To showcase the relationship between latitude and temperature/humidity/cloudiness/wind
+                              speed I utilize MatplotLib scatter plots to view:
+                          </p>
+
+                          <ul>
+                              <li>Temperature (F) vs. Latitude</li>
+                              <li>Humidity (%) vs. Latitude</li>
+                              <li>Cloudiness (%) vs. Latitude</li>
+                              <li>Wind Speed (mph) vs. Latitude</li>
+
+                          </ul>
+
+                      </section>
+
+                  </section>
+              </div>
+          </div>
+
+
+          <div class="col-md-4">
+              <div class="box box-right">
+                  <h2>Visualizations</h2>
+                  <hr>
+
+
+                  <div class="row">
+                      <div class="col-xs-6 col-sm-3 col-md-6">
+                          <figure>
+                              <a href="temp.html">
+                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsTemperature.png" alt="L vs. Temperature">
+                              </a>
+                          </figure>
+                      </div>
+
+                      <div class="col-xs-6 col-sm-3 col-md-6">
+                          <figure>
+                              <a href="humid.html">
+                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsHumidity.png" alt="L vs. Humidity">
+                              </a>
+                          </figure>
+                      </div>
+
+                      <div class="col-xs-6 col-sm-3 col-md-6">
+                          <figure>
+                              <a href="cloud.html">
+                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsCloudiness.png" alt="L vs. Cloudiness">
+                              </a>
+                          </figure>
+                      </div>
+
+                      <div class="col-xs-6 col-sm-3 col-md-6">
+                          <figure>
+                              <a href="wind.html">
+                                  <img id="landing-viz" src="/Users/anthonybrown/Desktop/Web-Design-Challenge/WebVisualization/Assets:Images/LatitudevsWindspeed.png" alt="L vs. Wind Speed">
+                              </a>
+                          </figure>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      
+      
+   
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
